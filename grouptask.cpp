@@ -46,13 +46,7 @@ int main()
     {
         fin >> edges[i].u >> edges[i].v;
     }
-    int trials = n * n;
-    int minCut = INT_MAX;
-    for (int i = 0; i < trials; i++)
-    {
-        minCut = min(minCut, func(edges, n));
-    }
-    fout << "Minimum Cut  " << minCut << endl;
+    fout << "Minimum Cut  " << func(edges, n) << endl;
     fin.close();
     fout.close();
     return 0;
